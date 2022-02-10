@@ -1,0 +1,36 @@
+  my $g = Graph::Directed->new;
+  my $internaldependencies = {};
+  my $iinternaldependencies = {};
+  foreach my $module1 (keys %$dependencies) {
+    $internaldependencies->{$module1} = {};
+    foreach my $module2 (keys %{$dependencies->{$module1}->{PERL}}) {
+      if (exists $dependencies->{$module2}) {
+  	$internaldependencies->{$module1}->{$module2} = 1;
+  	$iinternaldependencies->{$module2}->{$module1} = 1;
+	$g->add_edge($module1,$module2) if $module1 ne $module2;
+      }
+    }
+  }
+
+  # print Dumper($g->find_a_cycle());
+
+  my $modulesofdist;
+  my $imodulesofdist;
+  foreach my $module (keys %$dependencies) {
+    my $dist = 
+    $modulesofdist->{$dist}->{$module} = 1;
+    $imodulesofdist->{$module}->{$dist} = 1;
+    #     if ($module =~ /^((.*?)(::.*)?)$/) {
+    #       if ($3) {
+    # 	# $frdcsamodules->{$1} = $2;
+    # 	$modulesofdist->{$2}->{$1} = 1;
+    #       }
+    #     }
+  }
+  return {
+	  Dependencies => $dependencies,
+	  InternalDeps => $internaldependencies,
+	  IInternalDeps => $iinternaldependencies,
+	  ModulesOfDist => $modulesofdist,
+	  IModulesOfDist => $imodulesofdist,
+	 };

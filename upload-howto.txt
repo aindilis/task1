@@ -1,0 +1,4 @@
+http://www.cpan.org/modules/04pause.html
+
+Filename of upload must contain a version number.
+Package should come with a Makefile.PL or Build.PL

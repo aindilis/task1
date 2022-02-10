@@ -1,0 +1,25 @@
+We could test that the eval $c problem was due to it returning the
+last item rather than $VAR1 and we could make a work around and then
+reprogram everything the proper way.
+
+We could write software to untangle the dependencies by finding
+commonly used modules and splitting them off to their own
+distribution.
+
+We could adapt the code so that it can be used by packager to package
+perl programs like Koha for Debian.
+
+We could have it generate .tgz files and install scripts so that
+people who are not using debian can use it.
+
+Put up the software on sourceforge and freshmeat.
+
+Put task1 into svn.
+
+Get rid of the enormous directories.
+
+Make data packages as well.
+
+When outputing the debian install files, be sure to not just put the
+root ones but each individual module since some modules may belong to
+different distributions (i.e. usually their own).

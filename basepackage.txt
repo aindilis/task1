@@ -1,0 +1,575 @@
+# frdcsa-base
+
+# frdcsa-task
+# generate automatically from the software ontology
+
+# virtual packages
+
+frdcsa
+	frdcsa-cognitive-prostheses, frdcsa-software-conglomeration-and-packaging, frdcsa-health-software, frdcsa-artificial-intelligence, frdcsa-educational-systems, frdcsa-posi, frdcsa-ethics
+	
+frdcsa-track-cognitive-prostheses
+	unilang, pse, verber, audience, manager
+
+frdcsa-track-software-conglomeration-and-packaging
+	radar, cso, packager, architect
+
+frdcsa-track-health-software
+	akahige, gourmet
+
+frdcsa-track-artificial-intelligence
+	sayer, thinker, freekbs2, learner, reasonbase
+
+frdcsa-track-educational-systems
+	clear, study, ems, all, digilib
+
+frdcsa-track-posi
+	fieldgoal, ems
+
+frdcsa-track-ethics
+
+
+
+
+Dependencies: git-core, emacs22, mew, w3m-el, libclass-methodmaker-perl, bbdb, mysql-server, mysql-client, ?nmap?,
+super
+
+# add the stuff for the creation of .myconfig
+
+mkdir -p /var/lib/myfrdcsa/codebases/internal
+mkdir -p /var/lib/myfrdcsa/codebases/releases
+mkdir -p /var/lib/myfrdcsa/codebases/data
+mkdir -p /var/lib/myfrdcsa/codebases/minor
+mkdir -p /var/lib/myfrdcsa/codebases/minor-data
+
+# git clone ssh://andrewdo@posithon.org/gitroot/releases
+# git clone ssh://andrewdo@posithon.org/gitroot/minor
+
+# run the script for updating the perl links
+
+
+# check out git?  Not in this case
+
+ln -s /var/lib/myfrdcsa/codebases/releases/ender-0.1/ender-0.1 /var/lib/myfrdcsa/codebases/internal/ender
+ln -s /var/lib/myfrdcsa/codebases/releases/broker-0.1/broker-0.1 /var/lib/myfrdcsa/codebases/internal/broker
+ln -s /var/lib/myfrdcsa/codebases/releases/kmax-0.1/kmax-0.1 /var/lib/myfrdcsa/codebases/internal/kmax
+ln -s /var/lib/myfrdcsa/codebases/releases/gourmetjr-0.1/gourmetjr-0.1 /var/lib/myfrdcsa/codebases/internal/gourmetjr
+ln -s /var/lib/myfrdcsa/codebases/releases/reasonbase-0.1/reasonbase-0.1 /var/lib/myfrdcsa/codebases/internal/reasonbase
+ln -s /var/lib/myfrdcsa/codebases/releases/canvasser-0.1/canvasser-0.1 /var/lib/myfrdcsa/codebases/internal/canvasser
+ln -s /var/lib/myfrdcsa/codebases/releases/crawler-0.1/crawler-0.1 /var/lib/myfrdcsa/codebases/internal/crawler
+ln -s /var/lib/myfrdcsa/codebases/releases/pse-0.1/pse-0.1 /var/lib/myfrdcsa/codebases/internal/pse
+ln -s /var/lib/myfrdcsa/codebases/releases/event-log-0.1/event-log-0.1 /var/lib/myfrdcsa/codebases/internal/event-log
+ln -s /var/lib/myfrdcsa/codebases/releases/antispam-console-0.1/antispam-console-0.1 /var/lib/myfrdcsa/codebases/internal/antispam-console
+ln -s /var/lib/myfrdcsa/codebases/releases/learner-0.1/learner-0.1 /var/lib/myfrdcsa/codebases/internal/learner
+ln -s /var/lib/myfrdcsa/codebases/releases/sanctus-0.1/sanctus-0.1 /var/lib/myfrdcsa/codebases/internal/sanctus
+ln -s /var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2 /var/lib/myfrdcsa/codebases/internal/task1
+ln -s /var/lib/myfrdcsa/codebases/releases/sinless-0.1/sinless-0.1 /var/lib/myfrdcsa/codebases/internal/sinless
+ln -s /var/lib/myfrdcsa/codebases/releases/shops-0.9.5/shops-0.9.5 /var/lib/myfrdcsa/codebases/internal/shops
+ln -s /var/lib/myfrdcsa/codebases/releases/classify-0.1/classify-0.1 /var/lib/myfrdcsa/codebases/internal/classify
+ln -s /var/lib/myfrdcsa/codebases/releases/seeker-0.1/seeker-0.1 /var/lib/myfrdcsa/codebases/internal/seeker
+ln -s /var/lib/myfrdcsa/codebases/releases/source-hatchery-0.1/source-hatchery-0.1 /var/lib/myfrdcsa/codebases/internal/source-hatchery
+ln -s /var/lib/myfrdcsa/codebases/releases/corpus-0.2/corpus-0.2 /var/lib/myfrdcsa/codebases/internal/corpus
+ln -s /var/lib/myfrdcsa/codebases/releases/verber-0.2/verber-0.2 /var/lib/myfrdcsa/codebases/internal/verber
+ln -s /var/lib/myfrdcsa/codebases/releases/event-system-0.2/event-system-0.2 /var/lib/myfrdcsa/codebases/internal/event-system
+ln -s /var/lib/myfrdcsa/codebases/releases/akahige-0.1/akahige-0.1 /var/lib/myfrdcsa/codebases/internal/akahige
+ln -s /var/lib/myfrdcsa/codebases/releases/freekbs-0.2/freekbs-0.2 /var/lib/myfrdcsa/codebases/internal/freekbs
+ln -s /var/lib/myfrdcsa/codebases/releases/cso-0.1/cso-0.1 /var/lib/myfrdcsa/codebases/internal/cso
+ln -s /var/lib/myfrdcsa/codebases/releases/disciple-0.1/disciple-0.1 /var/lib/myfrdcsa/codebases/internal/disciple
+ln -s /var/lib/myfrdcsa/codebases/releases/parking-system-0.1/parking-system-0.1 /var/lib/myfrdcsa/codebases/internal/parking-system
+ln -s /var/lib/myfrdcsa/codebases/releases/brainleach-0.1/brainleach-0.1 /var/lib/myfrdcsa/codebases/internal/brainleach
+ln -s /var/lib/myfrdcsa/codebases/releases/diamond-0.1/diamond-0.1 /var/lib/myfrdcsa/codebases/internal/diamond
+ln -s /var/lib/myfrdcsa/codebases/releases/setanta-client-0.1/setanta-client-0.1 /var/lib/myfrdcsa/codebases/internal/setanta-client
+ln -s /var/lib/myfrdcsa/codebases/releases/formalize-0.1/formalize-0.1 /var/lib/myfrdcsa/codebases/internal/formalize
+ln -s /var/lib/myfrdcsa/codebases/releases/freekbs2-0.1/freekbs2-0.1 /var/lib/myfrdcsa/codebases/internal/freekbs2
+ln -s /var/lib/myfrdcsa/codebases/releases/rights-web-0.1/rights-web-0.1 /var/lib/myfrdcsa/codebases/internal/rights-web
+ln -s /var/lib/myfrdcsa/codebases/releases/audience-0.2/audience-0.2 /var/lib/myfrdcsa/codebases/internal/audience
+ln -s /var/lib/myfrdcsa/codebases/releases/pgourmet-0.4/pgourmet-0.4 /var/lib/myfrdcsa/codebases/internal/pgourmet
+ln -s /var/lib/myfrdcsa/codebases/releases/picform-0.1/picform-0.1 /var/lib/myfrdcsa/codebases/internal/picform
+ln -s /var/lib/myfrdcsa/codebases/releases/problemspace-0.1/problemspace-0.1 /var/lib/myfrdcsa/codebases/internal/problemspace
+ln -s /var/lib/myfrdcsa/codebases/releases/generix-0.1/generix-0.1 /var/lib/myfrdcsa/codebases/internal/generix
+ln -s /var/lib/myfrdcsa/codebases/releases/samwise-0.1/samwise-0.1 /var/lib/myfrdcsa/codebases/internal/samwise
+ln -s /var/lib/myfrdcsa/codebases/releases/radar-0.1/radar-0.1 /var/lib/myfrdcsa/codebases/internal/radar
+ln -s /var/lib/myfrdcsa/codebases/releases/frdcsa-el-0.1/frdcsa-el-0.1 /var/lib/myfrdcsa/codebases/internal/frdcsa-el
+ln -s /var/lib/myfrdcsa/codebases/releases/socbot-0.1/socbot-0.1 /var/lib/myfrdcsa/codebases/internal/socbot
+ln -s /var/lib/myfrdcsa/codebases/releases/silo-0.1/silo-0.1 /var/lib/myfrdcsa/codebases/internal/silo
+ln -s /var/lib/myfrdcsa/codebases/releases/score-0.2/score-0.2 /var/lib/myfrdcsa/codebases/internal/score
+ln -s /var/lib/myfrdcsa/codebases/releases/packager-0.1/packager-0.1 /var/lib/myfrdcsa/codebases/internal/packager
+ln -s /var/lib/myfrdcsa/codebases/releases/vanguard-0.1/vanguard-0.1 /var/lib/myfrdcsa/codebases/internal/vanguard
+ln -s /var/lib/myfrdcsa/codebases/releases/coauthor-0.1/coauthor-0.1 /var/lib/myfrdcsa/codebases/internal/coauthor
+
+# verify creation
+ls -al /var/lib/myfrdcsa/codebases/internal/
+
+cd /var/lib/myfrdcsa/codebases/internal/myfrdcsa/scripts/
+./gen-perl-links.pl 
+
+# setup CPAN
+sudo cpan
+
+cd .myconfig/
+
+rm ~/.emacs.d
+rm -rf ~/.emacs.d
+ln -s /home/justin/.myconfig/.emacs.d ~/
+
+ls -alrt
+emacs -nw
+screen -S user
+ls -alrt
+install-script-dependencies  "/var/lib/myfrdcsa/codebases/internal/unilang/start -s -u localhost 9000 -c"
+pushd /var/lib/myfrdcsa/codebases/internal/myfrdcsa
+cd scripts/
+ls
+./gen-
+./gen-perl-links.pl
+./gen-perl-links.pl
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/xwordnet-utils/xwn /usr/bin/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/academician/Cite /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/academician/Cite.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/acewiki-extensions/ACEWiki /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/acewiki-extensions/ACEWiki.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/android/Android /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ccpp/CCPP /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ccpp/CCPP.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/chap/CHAP /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/chap/CHAP.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/critic-browser/JSAA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/critic-browser/JSAA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/data-manager/DataManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/data-manager/DataManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/entertainment-center/EC /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/entertainment-center/EC.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ethical-consumer-system/ECS.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/folksonomy/Folksonomy /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/folksonomy/Folksonomy.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/food-ontology/FoodOntology /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/frdcsa-dashboard/Dashboard /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/frdcsa-dashboard/Dashboard.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/free-logic-form/LF /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/free-logic-form/LF.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/friend-finder/FriendFinder /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/friend-finder/FriendFinder.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/gourmet2/Gourmet2 /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/gourmet2/Gourmet2.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/house-rules/HouseRules.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/iahc-library-software/IAHC /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/iahc-library-software/IAHC.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-application-agent/JSAA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-application-agent/JSAA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-rapid-response/RapidResponse /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-rapid-response/RapidResponse.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/language-learning/LangLearn /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/language-learning/LangLearn.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/list-of-lists/LOL /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/list-of-lists/LOL.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/location-logic/LocationLogic /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/location-logic/LocationLogic.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/log-analysis/LogAnalyzer.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/marketing-manager/MarketingManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/marketing-manager/MarketingManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/media-library/Media /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/media-library/Media.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/metaverse/MetaVerse.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/news-monitor/NewsMonitor /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ofcs/OFCS.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/package-installation-manager/PackageManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/package-installation-manager/PackageManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/paperless-office/PaperlessOffice /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/paperless-office/PaperlessOffice.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/raiders-of-the-ftp-sites/Raiders /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/raiders-of-the-ftp-sites/Raiders.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/requirements-optimization/ReqOpt.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rsr/RSR /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rsr/RSR.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rte/RTE /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rte/RTE.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/sayer/Sayer /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/sayer/Sayer.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/setanta-agent/SetantaAgent /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/setanta-agent/SetantaAgent.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/simple-corpus-manager/CorpusManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/simple-corpus-manager/CorpusManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/software-indexer/SoftwareIndexer /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/software-indexer/SoftwareIndexer.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE2 /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE2.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppose-suppose/Suppose /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppose-suppose/Suppose.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppositional-reasoner/Suppose /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppositional-reasoner/Suppose.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/system-implementor/Implementor /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/system-implementor/Implementor.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/termios/Termios /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/termios/Termios.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/twitter-follower-analyzer/TFA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/twitter-follower-analyzer/TFA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/web-analytics/WA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/web-analytics/WA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/xwordnet-utils/XWN /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/xwordnet-utils/XWN.pm /usr/share/perl5/
+install-script-dependencies  "/var/lib/myfrdcsa/codebases/internal/unilang/start -s -u localhost 9000 -c"
+y
+y
+y
+install-script-dependencies  "/var/lib/myfrdcsa/codebases/internal/unilang/start -s -u localhost 9000 -c"
+
+y
+temp4now
+ls
+ls
+pushd /var/lib/myfrdcsa/codebases/internal/kbfs
+ls
+cd data
+ls -alrt
+mkdir /var/lib/myfrdcsa/codebases/data
+mkdir /var/lib/myfrdcsa/codebases/data/kbfs
+cd /var/lib/myfrdcsa/codebases/data/kbfs
+ls
+scp -r 192.168.1.200:/var/lib/myfrdcsa/codebases/data/kbfs/mysql-backups/20100720132230 .
+scp -r andrewdo@192.168.1.200:/var/lib/myfrdcsa/codebases/data/kbfs/mysql-backups/20100720132230 .
+ls
+cd 20100720132230/
+ls
+ls
+cd ..
+mkdir mysql-backups
+mv 20100720132230/ mysql-backups/
+ls
+cd mysql-backups/
+ls
+cd 20100720132230/
+ls
+ls -1
+ls
+mv create-commands  create-commands.txt
+for it in `ls` *.sql
+for it in `ls` *.sql
+for it in `ls *.sql`; do echo $it ; done
+for it in `ls *.sql`; do echo $it | sed -e 's/\.sql//' ; done
+for it in `ls -1 *.sql sed -e 's/\.sql//'`; do echo $it ; done
+for it in `ls -1 *.sql | sed -e 's/\.sql//'`; do echo $it ; done
+for it in `ls -1 *.sql | sed -e 's/\.sql//'`; do cat $it.sql | mysql -u root -p $it ; done
+ls
+cd
+ls
+mkdir /etc/myfrdcsa
+sudo mkdir /etc/myfrdcsa
+sudo mkdir /etc/myfrdcsa/config
+sudo mv perllib /etc/myfrdcsa/config
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+ls
+./spse2
+install-script-dependencies "./spse2"
+./spse2
+./spse2
+ls
+pushd /var/lib/myfrdcsa/codebases/internal/freekbs2
+cd data
+ls -al
+mkdir /var/lib/myfrdcsa/codebases/data/freekbs2
+cd /var/lib/myfrdcsa/codebases/data/freekbs2
+scp -r andrewdo@192.168.1.200:/var/lib/myfrdcsa/codebases/data/freekbs2/theorem-provers .
+sudo screen -S root
+emacs -nw
+ls -alrt
+install-script-dependencies  "/var/lib/myfrdcsa/codebases/internal/unilang/start -s -u localhost 9000 -c"
+pushd /var/lib/myfrdcsa/codebases/internal/myfrdcsa
+cd scripts/
+ls
+./gen-
+./gen-perl-links.pl
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/xwordnet-utils/xwn /usr/bin/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/academician/Cite /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/academician/Cite.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/acewiki-extensions/ACEWiki /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/acewiki-extensions/ACEWiki.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/android/Android /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ccpp/CCPP /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ccpp/CCPP.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/chap/CHAP /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/chap/CHAP.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/critic-browser/JSAA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/critic-browser/JSAA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/data-manager/DataManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/data-manager/DataManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/entertainment-center/EC /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/entertainment-center/EC.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ethical-consumer-system/ECS.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/folksonomy/Folksonomy /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/folksonomy/Folksonomy.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/food-ontology/FoodOntology /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/frdcsa-dashboard/Dashboard /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/frdcsa-dashboard/Dashboard.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/free-logic-form/LF /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/free-logic-form/LF.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/friend-finder/FriendFinder /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/friend-finder/FriendFinder.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/gourmet2/Gourmet2 /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/gourmet2/Gourmet2.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/house-rules/HouseRules.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/iahc-library-software/IAHC /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/iahc-library-software/IAHC.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-application-agent/JSAA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-application-agent/JSAA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-rapid-response/RapidResponse /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/js-rapid-response/RapidResponse.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/language-learning/LangLearn /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/language-learning/LangLearn.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/list-of-lists/LOL /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/list-of-lists/LOL.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/location-logic/LocationLogic /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/location-logic/LocationLogic.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/log-analysis/LogAnalyzer.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/marketing-manager/MarketingManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/marketing-manager/MarketingManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/media-library/Media /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/media-library/Media.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/metaverse/MetaVerse.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/news-monitor/NewsMonitor /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/ofcs/OFCS.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/package-installation-manager/PackageManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/package-installation-manager/PackageManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/paperless-office/PaperlessOffice /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/paperless-office/PaperlessOffice.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/raiders-of-the-ftp-sites/Raiders /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/raiders-of-the-ftp-sites/Raiders.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/requirements-optimization/ReqOpt.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rsr/RSR /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rsr/RSR.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rte/RTE /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/rte/RTE.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/sayer/Sayer /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/sayer/Sayer.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/setanta-agent/SetantaAgent /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/setanta-agent/SetantaAgent.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/simple-corpus-manager/CorpusManager /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/simple-corpus-manager/CorpusManager.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/software-indexer/SoftwareIndexer /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/software-indexer/SoftwareIndexer.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE2 /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/spse/SPSE2.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppose-suppose/Suppose /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppose-suppose/Suppose.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppositional-reasoner/Suppose /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/suppositional-reasoner/Suppose.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/system-implementor/Implementor /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/system-implementor/Implementor.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/termios/Termios /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/termios/Termios.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/twitter-follower-analyzer/TFA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/twitter-follower-analyzer/TFA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/web-analytics/WA /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/web-analytics/WA.pm /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/xwordnet-utils/XWN /usr/share/perl5/
+sudo ln -s /var/lib/myfrdcsa/codebases/minor/xwordnet-utils/XWN.pm /usr/share/perl5/
+install-script-dependencies  "/var/lib/myfrdcsa/codebases/internal/unilang/start -s -u localhost 9000 -c"
+
+ls
+pushd /var/lib/myfrdcsa/codebases/internal/kbfs
+ls
+cd data
+ls -alrt
+mkdir /var/lib/myfrdcsa/codebases/data
+mkdir /var/lib/myfrdcsa/codebases/data/kbfs
+cd /var/lib/myfrdcsa/codebases/data/kbfs
+ls
+scp -r 192.168.1.200:/var/lib/myfrdcsa/codebases/data/kbfs/mysql-backups/20100720132230 .
+scp -r andrewdo@192.168.1.200:/var/lib/myfrdcsa/codebases/data/kbfs/mysql-backups/20100720132230 .
+ls
+cd 20100720132230/
+ls
+cd ..
+mkdir mysql-backups
+mv 20100720132230/ mysql-backups/
+ls
+cd mysql-backups/
+ls
+cd 20100720132230/
+ls
+ls -1
+ls
+mv create-commands  create-commands.txt
+for it in `ls` *.sql
+for it in `ls *.sql`; do echo $it ; done
+for it in `ls *.sql`; do echo $it | sed -e 's/\.sql//' ; done
+for it in `ls -1 *.sql sed -e 's/\.sql//'`; do echo $it ; done
+for it in `ls -1 *.sql | sed -e 's/\.sql//'`; do echo $it ; done
+for it in `ls -1 *.sql | sed -e 's/\.sql//'`; do cat $it.sql | mysql -u root -p $it ; done
+ls
+cd
+ls
+mkdir /etc/myfrdcsa
+sudo mkdir /etc/myfrdcsa
+sudo mkdir /etc/myfrdcsa/config
+sudo mv perllib /etc/myfrdcsa/config
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+ls
+./spse2
+install-script-dependencies "./spse2"
+./spse2
+ls
+pushd /var/lib/myfrdcsa/codebases/internal/freekbs2
+cd data
+ls -al
+mkdir /var/lib/myfrdcsa/codebases/data/freekbs2
+cd /var/lib/myfrdcsa/codebases/data/freekbs2
+scp -r andrewdo@192.168.1.200:/var/lib/myfrdcsa/codebases/data/freekbs2/theorem-provers .
+pushd /spse2
+ls
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+./spse2
+ls
+clean-emacs-backups 
+ls
+kbs2 -
+kbs2 -h
+kbs2 -c Org::FRDCSA::Verber::PSEx2::Do --no-checking import do2.kbs
+kbs2 -h
+kbs2 --input-type "Emacs String" -c Org::FRDCSA::Verber::PSEx2::Do --no-checking import do2.kbs
+ls
+xview image.gif 
+pushd /var/lib/myfrdcsa/codebases/minor/frdcsa-dashboard
+./frdcsa-applet 
+install-script-dependencies ./frdcsa-applet 
+./frdcsa-applet 
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+./spse2
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+./spse2
+ls
+cd scripts/
+ls
+chmod +x ./test-use.pl 
+./test-use.pl 
+install-script-dependencies ./test-use.pl 
+cd ..
+./spse2
+find . | grep pm
+find . | grep pm | xargs grep require
+cd scripts/
+./test-use.pl
+install-script-dependencies ./test-use.pl
+cd ..
+./spse2
+install-script-dependencies ./spse2
+./spse2
+ls
+kbs2 -c Org::FRDCSA::Verber::PSEx2::Do --input-type "Emacs String" --no-checking import do2.kbs
+./spse2
+cd
+pushd /var/lib/myfrdcsa/codebases/internal/unilang
+cd etc/init.d/
+ls
+emacs -nw
+ls
+ls
+cd theorem-provers/
+ls
+ls vampire/
+cd ..
+cd theorem-provers/
+ls
+rm -rf CELT/
+ls
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+./spse -h
+find . | grep pm | xargs grep Debug
+find . | grep pm | xargs grep -i debug
+./spse2
+find . | grep pm
+pushd /var/lib/myfrdcsa/codebases/minor/frdcsa-dashboard
+ls data
+ls
+cd data
+ls -al data
+mkdir /var/lib/myfrdcsa/codebases/minor-data/frdcsa-dashboard
+mkdir /var/lib/myfrdcsa/codebases/minor-data/
+mkdir /var/lib/myfrdcsa/codebases/minor-data/frdcsa-dashboard
+cd data/
+ls
+scp -r andrewdo@192.168.1.200:/var/lib/myfrdcsa/codebases/minor/frdcsa-dashboard/data/ .
+ls
+mv data/* .
+ls
+rmdir data
+ls
+cd
+(frdcsa-applet &)
+ls
+pushd /spse2
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+ls
+pushd /var/lib/myfrdcsa/codebases/internal/freekbs2
+ls
+find . | grep pm | xargs grep -i debug
+ls
+chmod +x ./test-use.pl
+kbs2 -c Org::FRDCSA::Verber::PSEx2::Do show
+kbs2 -c Org::FRDCSA::Verber::PSEx2::Do show | sort
+ls
+cd ..
+cd spse
+ls
+cd ../minor/spse2
+ls
+cd ../minor/spse
+ls
+find . | grep pm
+./spse2
+cd
+ls
+pushd /var/lib/myfrdcsa/codebases/minor/spse
+./spse2
+
+pushd /var/lib/myfrdcsa/codebases/internal/unilang
+
+mkdir etc
+cd etc/
+mkdir init.d
+cd init.d/
+ls
+touch unilang
+ls
+ls /etc/init.d/
+ps aux | grep unilang
+killall /var/lib/myfrdcsa/codebases/internal/unilang/start
+ps aux | grep /var/lib/myfrdcsa/codebases/internal/unilang/start
+ps aux | grep /var/lib/myfrdcsa/codebases/internal/unilang/start | awk '{print $2}'
+ps aux | grep /var/lib/myfrdcsa/codebases/internal/unilang/start | awk '{print $2}' | xargs kill -9
+sudo cp unilang /etc/init.d/
+sudo nmap localhost
+ls
+rm unilang~
+ls
+sudo /etc/init.d/unilang start
+ls -al /etc/init.d/u
+ls -al /etc/init.d/unilang 
+ls -al /etc/init.d/
+
+
+sudo cp unilang /etc/init.d/
+sudo chmod 755 /etc/init.d/unilang 
+sudo update-rc.d unilang defaults
+
+# run tests?
+# sudo /etc/init.d/unilang restart
+
+# copy ?the?
+# add frdcsa-applet to the startup applications
+
+./spse2
+killall frdcsa-applet
+frdcsa-applet 
+
+mkdir -p ~/.config/frdcsa/frdcsa-applet
+mkdir -p ~/.config/frdcsa/spse2
+cp /var/lib/myfrdcsa/codebases/minor/spse/spse2.conf  ~/.config/frdcsa/spse2
+
+# # test
+# sudo /etc/init.d/unilang start
+
+sudo shutdown -r now

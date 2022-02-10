@@ -1,0 +1,120 @@
+dpkg-buildpackage: source package task1
+dpkg-buildpackage: source version 0.2-1
+dpkg-buildpackage: source changed by Andrew Dougherty <andrewdo@frdcsa.org>
+dpkg-buildpackage: host architecture i386
+ debian/rules clean
+dh_testdir
+dh_testroot
+rm -f build-arch-stamp build-indep-stamp configure-stamp
+# Add here commands to clean up after the build process.
+/usr/bin/make clean
+make[1]: Entering directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+(find . | grep '~$' | xargs rm) || true
+rm: missing operand
+Try `rm --help' for more information.
+make[1]: Leaving directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+dh_clean 
+ dpkg-source -b task1-0.2
+dpkg-source: warning: missing information for output field Standards-Version
+dpkg-source: building task1 using existing task1_0.2.orig.tar.gz
+dpkg-source: building task1 in task1_0.2-1.diff.gz
+dpkg-source: warning: file debian/control has no final newline (either original or modified version)
+dpkg-source: warning: file debian/libtask1-perl.install has no final newline (either original or modified version)
+dpkg-source: building task1 in task1_0.2-1.dsc
+ debian/rules build
+dh_testdir
+# Add here commands to configure the package.
+touch configure-stamp
+# Add here commands to compile the arch part of the package.
+#/usr/bin/make 
+touch build-arch-stamp
+# Add here commands to compile the indep part of the package.
+#/usr/bin/make doc
+touch build-indep-stamp
+ debian/rules binary
+dh_testdir
+dh_testroot
+dh_clean -k -s 
+dh_installdirs -s
+# Add here commands to install the arch part of the package into 
+# debian/tmp.
+/usr/bin/make DESTDIR=/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2/debian/task1 install
+make[1]: Entering directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+make[1]: Nothing to be done for `install'.
+make[1]: Leaving directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+dh_install -s
+/usr/bin/make -f debian/rules DH_OPTIONS=-s binary-common
+make[1]: Entering directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+dh_testdir
+dh_testroot
+dh_installchangelogs 
+dh_installdocs
+dh_installexamples
+dh_installman
+dh_link
+dh_strip
+dh_compress 
+dh_fixperms
+dh_makeshlibs
+dh_installdeb
+dh_shlibdeps
+dh_gencontrol
+dh_md5sums
+dh_builddeb
+dpkg-deb: building package `task1' in `../task1_0.2-1_i386.deb'.
+dpkg-deb: building package `libtask1-perl' in `../libtask1-perl_0.2-1_i386.deb'.
+make[1]: Leaving directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+dh_testdir
+dh_testroot
+dh_clean -k -i 
+dh_clean: I have no package to build
+dh_installdirs -i
+dh_installdirs: I have no package to build
+# Add here commands to install the indep part of the package into
+# debian/<package>-doc.
+#INSTALLDOC#
+dh_install -i
+dh_install: I have no package to build
+/usr/bin/make -f debian/rules DH_OPTIONS=-i binary-common
+make[1]: Entering directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+dh_testdir
+dh_testdir: I have no package to build
+dh_testroot
+dh_installchangelogs 
+dh_installchangelogs: I have no package to build
+dh_installdocs
+dh_installdocs: I have no package to build
+dh_installexamples
+dh_installexamples: I have no package to build
+dh_installman
+dh_installman: I have no package to build
+dh_link
+dh_link: I have no package to build
+dh_strip
+dh_strip: I have no package to build
+dh_compress 
+dh_compress: I have no package to build
+dh_fixperms
+dh_fixperms: I have no package to build
+dh_makeshlibs
+dh_makeshlibs: I have no package to build
+dh_installdeb
+dh_installdeb: I have no package to build
+dh_shlibdeps
+dh_shlibdeps: I have no package to build
+dh_gencontrol
+dh_gencontrol: I have no package to build
+dh_md5sums
+dh_md5sums: I have no package to build
+dh_builddeb
+dh_builddeb: I have no package to build
+make[1]: Leaving directory `/var/lib/myfrdcsa/codebases/releases/task1-0.2/task1-0.2'
+ signfile task1_0.2-1.dsc
+gpg: WARNING: unsafe ownership on configuration file `/home/andrewdo/.gnupg/gpg.conf'
+gpg: skipped "Andrew Dougherty <andrewdo@frdcsa.org>": secret key not available
+gpg: [stdin]: clearsign failed: secret key not available
+ dpkg-genchanges  >../task1_0.2-1_i386.changes
+
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage: warning: Failed to sign .dsc and .changes file
+dpkg-buildpackage: full upload (original source is included)

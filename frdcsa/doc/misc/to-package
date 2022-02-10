@@ -1,0 +1,31 @@
+# package for frdcsa-base
+sudo radar install algorithm::cluster
+sudo radar install base
+# not found sudo radar install cgi.pm
+# error sudo radar install codebase
+# already in package perl sudo radar install cpan
+sudo radar install data::dumper
+sudo radar install digest::md5
+sudo radar install file::pid
+sudo radar install html::calendar::simple
+sudo radar install io
+./debaux-build: Couldn't move sources to original source directory: IO-1.23 => io-perl-1.23.orig : No such file or directory
+sudo radar install lego::nxt::2.00
+/usr/bin/debaux-build: Couldn't move sources to original source directory: LEGO-NXT-2.00-2.00 => lego-nxt-perl-2.00.orig : No such file or directory
+sudo radar install lingua::en::segmenter
+dpkg: error processing /var/tmp/debaux-root/lingua-en-segmenter-perl/liblingua-en-segmenter-perl_0.1-1_i386.deb (--install):
+ trying to overwrite `/usr/share/perl5/Lingua/EN/Segmenter.pm', which is also in package liblingua-en-splitter-perl
+sudo radar install math::complex
+sudo radar install net::dict
+
+sudo radar install net::whois::iana
+sudo radar install perl::lisp
+not found
+sudo radar install scalar::list::utils
+not found
+sudo radar install termreadkey
+not found
+sudo radar install text::csv_xs
+sudo radar install text::tabs+wrap
+sudo radar install time::hires
+sudo radar install www::page::modified

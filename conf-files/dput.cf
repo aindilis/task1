@@ -1,0 +1,6 @@
+[local]
+fqdn = localhost
+method = local
+incoming = /var/lib/myfrdcsa/packages/debian/mini-dinstall/incoming
+allow_unsigned_uploads = 1
+# post_upload_command = mini-dinstall -c /var/lib/myfrdcsa/codebases/internal/task1/conf-files/mini-dinstall.conf -n --batch

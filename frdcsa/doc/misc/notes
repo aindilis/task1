@@ -1,0 +1,4 @@
+# (debaux should depend on dh-make)
+echo "debiandir /var/tmp/debaux" > ~/.debauxrc
+mkdir /var/tmp/debaux
+mkdir /var/tmp/debaux-root

@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+
+use Task1::AptFileFast;
+
+my $aff = Task1::AptFileFast->new
+   ();
+
+$aff->Update;
+# $aff->Search
+#   (Search => (shift));
